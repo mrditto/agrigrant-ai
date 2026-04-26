@@ -1,25 +1,48 @@
-# Fixed app.py with necessary changes
+import streamlit as st
+import requests
 
-# Import the required libraries
-import ...
+class Model:
+    def __init__(self):
+        # Initialize your model here
+        pass
 
-# Initialize the model properly
-model = GenerativeModel("gemini-2.0-flash")
+def validate_email(email):
+    import re
+    email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    return re.match(email_regex, email) is not None
 
-# Other code...
-
-# API key check function
-def validate_api_key(api_key):
+def main():
+    st.title('Grant Finder')
+    api_key = st.text_input('API Key')
     if not api_key:
-        raise ValueError("API key is missing.")
+        st.error('API Key is required.')
+        return
 
-# Match grants function call
+    email = st.text_input('Email')
+    if email and not validate_email(email):
+        st.error('Invalid email address.')
+        return
+
+    # Use the model
+    model = Model()
+
+    # Assuming you have grants data
+    grants = fetch_grants_data()
+    if not grants:
+        st.error('No grants found.')
+        return
+
+    # Proceed to display grants
+    for grant in grants:
+        st.write(grant)
+
+def fetch_grants_data():
+    # Fetch your grants data from an API
+    response = requests.get('https://api.example.com/grants')
+    if response.status_code != 200:
+        st.error('Error fetching grants data.')
+        return None
+    return response.json()
+
 if __name__ == '__main__':
-    api_key = "Your-API-Key"
-    validate_api_key(api_key)
-    # Call match_grants() only after validation
-    match_grants(...)
-
-# Include JSON grants database in the prompt as needed
-
-# Other code...
+    main()
