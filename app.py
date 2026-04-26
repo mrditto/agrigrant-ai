@@ -1,18 +1,25 @@
-# Updated app.py
+# Fixed app.py with necessary changes
 
-# Import statements...
+# Import the required libraries
+import ...
 
-# Bug Fixes
-# Fix Bug #1
-# Changed line 72 to assign the GenerativeModel to a variable
+# Initialize the model properly
 model = GenerativeModel("gemini-2.0-flash")
 
-# Fix Bug #2
-if api_key:
-    # Step 5 implementation...  # Wrap step 5 block here
+# Other code...
 
-# Fix Bug #3
-# Pass grants_db JSON to the Gemini prompt
-# This would typically involve a line like: gemini_prompt(grants_db_json)
+# API key check function
+def validate_api_key(api_key):
+    if not api_key:
+        raise ValueError("API key is missing.")
 
-# Rest of the app.py implementation...
+# Match grants function call
+if __name__ == '__main__':
+    api_key = "Your-API-Key"
+    validate_api_key(api_key)
+    # Call match_grants() only after validation
+    match_grants(...)
+
+# Include JSON grants database in the prompt as needed
+
+# Other code...
