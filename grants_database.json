@@ -1,0 +1,60 @@
+{
+  "grants": [
+    {
+      "name": "EQIP (Environmental Quality Incentives Program)",
+      "agency": "USDA NRCS",
+      "description": "Cost-share program for sustainable agriculture practices",
+      "max_funding": "$450,000",
+      "url": "https://www.nrcs.usda.gov/programs/eqip/"
+    },
+    {
+      "name": "CSP (Conservation Stewardship Program)",
+      "agency": "USDA NRCS",
+      "description": "5-year contracts for proven conservation practices",
+      "max_funding": "$200,000",
+      "url": "https://www.nrcs.usda.gov/programs/csp/"
+    },
+    {
+      "name": "VAPG (Value-Added Producer Grant)",
+      "agency": "USDA RDA",
+      "description": "Support for processing and marketing value-added products",
+      "max_funding": "$250,000",
+      "url": "https://www.rd.usda.gov/programs-services/value-added-producer-grants"
+    },
+    {
+      "name": "REAP (Rural Energy for America)",
+      "agency": "USDA RDA",
+      "description": "Renewable energy and energy efficiency improvements",
+      "max_funding": "$1,000,000",
+      "url": "https://www.rd.usda.gov/programs-services/reap"
+    },
+    {
+      "name": "OCCSP (Organic Certification Cost Share)",
+      "agency": "USDA FSA",
+      "description": "Covers costs of organic certification",
+      "max_funding": "$750",
+      "url": "https://www.fsa.usda.gov/programs-and-services/occsp/"
+    },
+    {
+      "name": "CRP (Conservation Reserve Program)",
+      "agency": "USDA FSA",
+      "description": "Long-term retirement of environmentally sensitive land",
+      "max_funding": "$50,000/year",
+      "url": "https://www.fsa.usda.gov/programs-and-services/crp/"
+    },
+    {
+      "name": "BFRDP (Beginning Farmer Development)",
+      "agency": "USDA NIFA",
+      "description": "Training and education for beginning farmers",
+      "max_funding": "Varies",
+      "url": "https://www.nifa.usda.gov/programs/beginning-farmer-and-rancher-development-program"
+    },
+    {
+      "name": "SCBGP (Specialty Crop Block Grant)",
+      "agency": "USDA AMS",
+      "description": "Support for specialty crops like vegetables and fruit",
+      "max_funding": "Varies by state",
+      "url": "https://www.ams.usda.gov/scbgp"
+    }
+  ]
+}
