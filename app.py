@@ -41,6 +41,7 @@ def fetch_grants_data():
     response = requests.get('https://api.example.com/grants')
     if response.status_code != 200:
         st.error('Error fetching grants data.')
+        cd /home/user/agrigrant-ai && git push -u origin claude/check-for-bugs-dTZpS
         return None
     return response.json()
 
