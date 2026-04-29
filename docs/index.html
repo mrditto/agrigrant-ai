@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriGrant AI</title>
+    <meta
+      name="description"
+      content="AgriGrant AI helps farmers browse grant opportunities and safely access the live app."
+    />
+    <style>
+      :root {
+        --bg: #faf3e0;
+        --bg-accent: #f5e6c8;
+        --surface: rgba(255, 250, 240, 0.88);
+        --border: rgba(107, 68, 35, 0.18);
+        --text: #3d2817;
+        --muted: #6b4423;
+        --brand: #c9881f;
+        --brand-deep: #8f5d16;
+        --shadow: 0 24px 64px rgba(61, 40, 23, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(201, 136, 31, 0.18), transparent 32%),
+          linear-gradient(180deg, var(--bg) 0%, #fffdf7 48%, var(--bg-accent) 100%);
+      }
+
+      .shell {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-copy {
+        padding: 42px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.6rem, 5vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        max-width: 10ch;
+      }
+
+      .intro {
+        margin-top: 18px;
+        max-width: 58ch;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: linear-gradient(135deg, var(--brand) 0%, #e4b154 100%);
+        box-shadow: 0 14px 30px rgba(201, 136, 31, 0.28);
+      }
+
+      .button-secondary {
+        border-color: var(--border);
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      .hero-card {
+        padding: 28px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .hero-card .stat {
+        padding: 18px 20px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(107, 68, 35, 0.12);
+      }
+
+      .eyebrow {
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--brand-deep);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.45rem;
+        margin-top: 6px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .section {
+        padding: 24px;
+      }
+
+      .section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .section p,
+      .section li {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 8px;
+        background: rgba(61, 40, 23, 0.08);
+        font-family: Consolas, monospace;
+        color: var(--text);
+      }
+
+      .footer {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy,
+        .hero-card,
+        .section {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="panel hero-copy">
+          <p class="eyebrow">Farmer funding made easier</p>
+          <h1>AgriGrant AI</h1>
+          <p class="intro">
+            Browse farmer-focused grant opportunities in a simple, public website while the live
+            Python app stays on a secure server-side host. This keeps API keys and secrets out of
+            GitHub Pages and out of your visitors' browsers.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="https://YOUR-APP.streamlit.app">Open Live App</a>
+            <a class="button button-secondary" href="https://github.com/mrditto/agrigrant-ai">View Source</a>
+          </div>
+        </div>
+
+        <aside class="panel hero-card">
+          <div class="stat">
+            <span class="eyebrow">Hosting</span>
+            <strong>GitHub Pages + Streamlit</strong>
+          </div>
+          <div class="stat">
+            <span class="eyebrow">Security</span>
+            <strong>Keep API keys in server-side secrets</strong>
+          </div>
+          <div class="stat">
+            <span class="eyebrow">Safe pattern</span>
+            <strong>No secret values in HTML, JS, or the repo</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel section">
+          <h2>What the app does</h2>
+          <p>
+            The live app displays grants from the bundled database and links people directly to the
+            official funding pages.
+          </p>
+        </article>
+
+        <article class="panel section">
+          <h2>How to access it</h2>
+          <p>
+            Use this GitHub Pages site as the public homepage, then send users into the live app
+            with the main button above.
+          </p>
+        </article>
+
+        <article class="panel section">
+          <h2>Why this is safer</h2>
+          <p>
+            GitHub Pages is static, so anything placed there is public. Sensitive API keys should
+            live only in server-side environment variables or Streamlit secrets.
+          </p>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel section">
+          <h2>Before you publish</h2>
+          <ul>
+            <li>Replace <code>YOUR-APP.streamlit.app</code> with your deployed app URL.</li>
+            <li>The GitHub source link is already connected to the real repository.</li>
+            <li>Configure app secrets in your hosting provider, not in the repo.</li>
+          </ul>
+        </article>
+
+        <article class="panel section">
+          <h2>Good rules for API safety</h2>
+          <ul>
+            <li>Never commit secret keys to GitHub.</li>
+            <li>Never expose keys in frontend JavaScript.</li>
+            <li>Read secrets from host-managed environment variables.</li>
+          </ul>
+        </article>
+
+        <article class="panel section">
+          <h2>Recommended setup</h2>
+          <ul>
+            <li>Public site: GitHub Pages</li>
+            <li>Live Streamlit app: Streamlit Community Cloud</li>
+            <li>Secrets: <code>st.secrets</code> or environment variables</li>
+          </ul>
+        </article>
+      </section>
+
+      <p class="footer">AgriGrant AI public homepage</p>
+    </main>
+  </body>
+</html>
